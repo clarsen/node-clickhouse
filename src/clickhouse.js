@@ -217,7 +217,7 @@ ClickHouse.prototype.getReqParams = function () {
 	var urlObject = {};
 
 	// avoid to set defaults - node http module is not happy
-	"protocol auth host hostname port path localAddress headers agent createConnection timeout ca".split (" ").forEach (function (k) {
+	"protocol auth host hostname port path localAddress headers agent createConnection timeout ca rejectUnauthorized".split (" ").forEach (function (k) {
 		if (this.options[k] !== undefined)
 			urlObject[k] = this.options[k];
 	}, this);
